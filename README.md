@@ -1,4 +1,4 @@
-# Heroi
+
 # O Herói
 
 RPG simples de navegador desenvolvido com HTML, CSS e JavaScript.
