@@ -1,2 +1,8 @@
 # Heroi
-RPG de navegador com combate por turnos, evolução, loja e salvamento local, feito com HTML, CSS e JavaScript.
+# O Herói
+
+RPG simples de navegador desenvolvido com HTML, CSS e JavaScript.
+
+## Jogar
+
+[Abrir o jogo](https://lucasosieljesusduval-code.github.io/Heroi/)
