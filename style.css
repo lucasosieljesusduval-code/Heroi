@@ -1,0 +1,360 @@
+body {
+    background-color: #101827;
+    background: linear-gradient(to bottom, #101827, #302044);
+    color: #f4ecd8;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+body:has(#apresentacao-chefe:not([hidden])){
+    background-color: #1a1a1a;
+    justify-content: flex-start;
+    padding-top: 24px;
+    background-image: url("imagens/Vale Encantado sob a Lua Cheia.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#imagem-chefe {
+    display: block;
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+    margin-inline: auto;
+}
+
+#musica {
+    position:fixed;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    max-width: calc(100% - 24px);
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 10;
+    padding: 10px;
+    border-radius: 16px;
+    box-sizing: border-box;
+    background-color: rgb(16 24 39 / 90%);
+}
+
+#painel-recursos {
+    padding: 12px 20px;
+    box-sizing: border-box;
+    background-color: rgb(16 24 39 / 90%);
+    border-radius: 16px;
+    background: linear-gradient(to bottom, #e50a06, #3605f8);
+    
+}
+
+#painel-recursos p {
+    margin: 8px 0;
+    padding: 0;
+}
+
+#musica button {
+    background-color: #101827;
+    background: linear-gradient(to bottom, #06e57d, #7205f8);
+    border-radius: 20px;
+}
+
+#Conjunto {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    justify-content: center;
+}
+
+body:has(#Loja:not([hidden])){
+    background-color: #1a1a1a;
+    justify-content: flex-start;
+    padding-top: 24px;
+    background-image: url("imagens/Apotecário Medieval de Poções e Armamentos.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body:has(#Cidade-Destruída:not([hidden])) {
+    background-color: #1a1a1a;
+    justify-content: flex-start;
+    padding-top: 24px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body:has(#Floresta:not([hidden])) {
+    background-color: #1a1a1a;
+    justify-content: flex-start;
+    padding-top: 24px;
+    background-image: url("imagens/Vale Encantado das Cachoeiras.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body:has(#Cidade-Provisória:not([hidden])) {
+    background-image: url("imagens/Assentamento Medieval na Floresta.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #1a1a1a;
+    justify-content: flex-start;
+    padding-top: 24px;
+}
+
+body:has(#Dormitório:not([hidden])) {
+    background-image: url("imagens/Quarto Medieval Aconchegante à Luz de Velas.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #1a1a1a;
+    justify-content: flex-start;
+    padding-top: 24px;
+}
+    
+#Cidade-Destruída h2 {
+    text-align: center;
+    margin-inline: auto;
+    max-width: 300px;
+    padding: 24px;
+    
+}
+
+#apresentacao-chefe {
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+    padding: 16px;
+    margin-inline: auto;
+    text-align: center;
+}
+
+#apresentacao-chefe > h2,
+#apresentacao-chefe > p {
+    background-color: rgb(16 24 39 / 90%);
+    padding: 16px;
+    border-radius: 16px;
+}
+
+main {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ gap: 16px;
+ width: 100%;
+}
+
+.Acoes-Cidade {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 600px;
+    margin-inline: auto;
+}
+
+#Loja,
+#Dormitório {
+    width: 100%;
+    max-width: 700px;
+    box-sizing: border-box;
+    padding: 16px;
+    margin-inline: auto;
+    text-align: center;
+}
+
+main button{
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    background-color: #d4ad60;
+    color: #101827;
+    border: none;
+    width: 250px;
+    height: 100px;
+    border-radius: 50px;
+    font-size: 22px;
+    font-family: inherit;
+    background: linear-gradient(to bottom, #f0d493, #b88738);
+    transition: background-color 0.8s ease;
+}
+
+main button:focus-visible {
+    outline: 3px solid #f4ecd8;
+    outline-offset: 4px;
+}
+
+main button:disabled {
+    opacity: 0.5;
+}
+
+main button:not(:disabled):hover {
+    background-color: #ebc77f;
+    filter: brightness(1.2);
+    color: #101827;
+    cursor: pointer;
+}
+
+#tela-menu:not([hidden]) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+#História-Inicial {
+    max-width: 700px;
+    padding: 24px;
+    text-align: center;
+}
+
+#imagem-peixe {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    display: block;
+    margin: 0 auto;
+}
+
+#imagem-aventureiro {
+    display: block;
+    width: 280px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 20px;
+    border-radius: 16px;
+    background-color: transparent;
+}
+
+
+#Ir-Cidade-Provisória {
+    background-color: #2457a7;
+    color: white;
+    background: linear-gradient(to bottom, #4c06f0, #7b08c7);
+}
+
+#Ir-Cidade-Provisória:not(:disabled):hover {
+    background-color: #3673ce;
+     
+}
+
+#Cidade-Provisória p{
+    background-color: #101827;
+    padding: 16px;
+    border-radius: 12px;
+}
+
+#Cidade-Destruída p{
+    max-width: 300px;
+    padding: 24px;
+    text-align: center;
+    max-width: 55ch;
+    margin-inline: auto;
+}
+
+[hidden] {
+    display: none;
+}
+
+#Cidade-Provisória {
+    width: 700px;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 24px;
+    text-align: center;
+    margin-inline: auto;
+}
+
+#Floresta {
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+    padding: 16px;
+    text-align: center;
+}
+
+#encontro {
+    background-color: rgb(16 24 39 / 90%);
+    color: #f4ecd8;
+    padding: 20px;
+    border-radius: 20px;
+    margin-block: 20px;
+    text-align: center;
+}
+
+#Floresta > h2,
+#Floresta > p {
+    background-color: rgb(16 24 39 / 90%);
+    padding: 16px;
+    border-radius: 16px;
+}
+
+#imagem-inimigo {
+    display: block;
+    width: 180px;
+    max-width: 100%;
+    height: auto;
+    margin-inline: auto;
+}
+
+@media (max-width: 600px){
+    #musica {
+        position:static;
+        max-width: 100%;
+        justify-content: center;
+        margin: 12px;
+    }
+}
+
+.acoes-floresta {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.acoes-batalha {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+#final-jogo {
+    width: 100%;
+    max-width: 700px;
+    box-sizing: border-box;
+    padding: 24px;
+    margin-inline: auto;
+    text-align: center;
+}
+
+#final-jogo p {
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+#final-jogo h2 {
+    color: #f0d493;
+    font-size: clamp(32px, 6vw, 48px);
+    letter-spacing: 2px;
+    text-shadow: 0 2px 12px rgb(212 173 96 / 35%);
+}

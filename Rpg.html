@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Herói</title>
+</head>
+<body>
+    <div id="musica">
+        <button type="button" id="alternar-musica">
+            Ligar Música
+        </button>
+        <span id="nome-musica">Nenhuma musica tocando</span>
+        <button type="button" id="proxima-musica" aria-label="Próxima musica" hidden>
+             &rarr;
+        </button>
+    </div>
+    <audio id="audio-musica" src="musica/peaceful_ville_2023.mp3" loop></audio>
+    <main>
+    <div id="painel-recursos" hidden>
+    <p>Vida: <span id="vida-atual">10 / 10</span></p>
+    <p>Mana: <span id="mana-atual">10 / 10</span></p>
+    <p>Experiência: <span id="Experiência-Atual">0</span></p>
+    <p>Ouro: <span id="ouro-atual">0</span></p>
+    </div>
+    <section id="tela-menu">
+    <h1>O Herói</h1>   
+    <button type="button" id="Iniciar-Jogo">Iniciar Jogo</button>
+    <button type="button" id="Carregar-Jogo" disabled>Carregar Jogo</button>
+    <button type="button" id="Apagar-Save" disabled>Apagar Progresso</button>
+    <button type="button" id="Sair-do-Jogo" disabled>Sair do Jogo [Meramente para fins de demonstração]</button>
+    </section>
+    <section id="História-Inicial" hidden>
+    <img src="imagens/Kaiju Peixe Devasta a Cidade.png" alt="Peixe com pé enorme" id="imagem-peixe">
+    <h2>O início da jornada</h2>
+    <p id="texto-história">O protagonista estava voltando de boas para casa até que um peixe com pé enorme apareceu no horizonte. Ele deu uma surra no protagonista, roubou seu dinheiro, acabou com sua cidade e foi embora. Agora o herói deve enfrentar os desafios que o aguardam.</p>
+    <button type="button" id="Continuar">Continuar</button>
+    </section>
+
+    <section id="Cidade-Destruída" hidden>
+        <h2>A Cidade Destruída</h2>
+        <p>Nosso personagem encontra a cidade em ruínas, com edifícios destruídos e pessoas desesperadas. Ele deve encontrar uma maneira de restaurar a paz.</p>
+        <img src="imagens/Herói Aventureiro com Espada Gigante.png" alt="Aventureiro com espada gigante" id="imagem-aventureiro">
+        <div id="Conjunto">
+        <button type="button" id="Status">Status do Personagem</button>
+        <button type="button" id="Mudar-Aparência">Mudar Aparência</button>
+        <button type="button" id="Ir-Cidade-Provisória">Cidade Provisória</button>
+        <button type="button" id="Ir-Floresta">A Floresta</button>
+        <button type="button" id="Salvar-Jogo">Salvar Jogo</button>
+        </div>
+        <p id="mensagem-save" role="status"></p>
+        <section id="status-personagem" hidden>
+            <h3>Status do Personagem</h3>
+            <p>Nome: <span id="status-nome">Herói</span></p>
+            <p>Nível: <span id="status-nivel">1</span></p>
+            <p>Força: <span id="status-forca">5</span></p>
+            <p>Defesa: <span id="status-defesa">3</span></p>
+            <p>Magia: <span id="status-magia">2</span></p>
+            <p>Vida: <span id="status-vida">10 / 10</span></p>
+            <p>Mana: <span id="status-mana">10 / 10</span></p>
+            <p>Experiência: <span id="status-experiencia">0</span></p>
+            <button type="button" id="Fechar-Status">Fechar</button>
+        </section>
+            
+    </section>
+
+    <section id="Floresta" hidden>
+        <h2>A Floresta</h2>
+        <p>Nosso personagem entra em uma floresta densa, onde encontra criaturas perigosas e desafios inesperados. Ele(a) deve lutar para sobreviver e encontrar um caminho de volta à cidade.</p>
+        <div class="acoes-floresta">
+        <button type="button" id="Procurar-Criatura-Fraca">Procurar Criatura Fraca</button>
+        <button type="button" id="Procurar-Criatura-Forte">Procurar criatura forte</button>
+        <button type="button" id="Enfrentar-Chefe">Enfrentar o chefe</button>
+        <button type="button" id="Voltar-Floresta">Voltar para a Cidade Destruída</button>
+        </div>
+        <div id="encontro" hidden>
+            <h3 id="nome-inimigo"></h3>
+            <img src="imagens/Peixe anfíbio realista com patas.png" alt="Imagem do inimigo" id="imagem-inimigo">
+            <p>Vida:<span id="vida-inimigo">5</span></p>
+            <div class="acoes-batalha">
+            <button type="button" id="Atacar">Atacar</button>
+            <button type="button" id="Mortal-Slash">Mortal Slash - 3 Mana</button>
+            </div>
+            <p id="mensagem-combate" role="status"></p>
+        </div>
+        
+    </section>
+    <section id ="apresentacao-chefe" hidden>
+        <h2>Buscando o Grande Vilão!</h2>
+        <p>Após muitos anos de treino e batalhas intensas. Nosso protagonista finalmente se sente confiante para desafiar aquele que destruiu 
+            a harmonia de sua cidade e roubou seu dinheiro. Em busca de justiça, honra, xp e moedas nosso campeão desafia o 
+            inimigo principal do arco </p>
+        <div class="acoes-batalha">
+        <button type="button" id="Comecar-Batalha-Chefe">
+        Começar batalha
+    </button>
+     <button type="button" id="Voltar-Apresentacao-Chefe">
+        Voltar à floresta
+    </button>
+    </div>
+    </section>
+    <section id="final-jogo" hidden>
+    <h2>Vitória!</h2>
+    <p>
+        Você derrotou o peixe e depois viu que ele havia deixado uma carta no chão. Revelando perigos ainda mais desafiadores 
+        em outras partes do mundo. Será que nosso protagonista está pronto para novos desafios?
+    </p>
+
+    <button type="button" id="Voltar-Final">
+        Voltar à floresta
+    </button>
+</section>
+    <section id="Cidade-Provisória" hidden>
+        <h2>A Cidade Provisória</h2>
+        <p>Nosso personagem encontra uma cidade provisória, onde as pessoas estão tentando reconstruir suas vidas. Ele(a) deve ajudar a cidade e enfrentar novos desafios.</p>
+        <div class="Acoes-Cidade">
+        <button type="button" id="Voltar-Cidade-Destruída">Voltar para a Cidade Destruída</button>
+        <button type="button" id="Ir-Dormitório">Dormitório</button>
+        <button type="button" id="Ir-Loja">Loja</button>
+        </div>
+        
+    </section>
+    <section id="Loja" hidden>
+    <h2>Loja</h2>
+    <p>Suprimentos para continuar sua jornada.</p>
+    <article>
+    <h3>Refeição simples</h3>
+    <p>Recupera até 5 de Vida. Preço: 3 de ouro.</p>
+     <button type="button" id="Comprar-Refeicao">
+        Comprar e consumir
+    </button>
+    </article>
+    <article>
+    <h3>Cerveja pra ficar doidão!</h3>
+    <p>Recupera até 5 de Mana. Preço: 3 de ouro.</p>
+
+    <button type="button" id="Comprar-Bebida">
+        Comprar e beber
+    </button>
+</article>
+<article>
+    <h3>Espada simples</h3>
+    <p>Aumenta sua Força em 2. Preço: 15 de ouro.</p>
+
+    <button type="button" id="Comprar-Espada">
+        Comprar espada
+    </button>
+</article>
+<article>
+    <h3>Armadura simples</h3>
+    <p>Aumenta sua Defesa em 2. Preço: 20 de ouro.</p>
+
+    <button type="button" id="Comprar-Armadura">
+        Comprar Armadura
+    </button>
+</article>
+<article>
+    <h3>Talismã simples</h3>
+    <p>Aumenta sua Magia em 2 e Defesa em 1. Preço: 12 de ouro.</p>
+
+    <button type="button" id="Comprar-Talisma">
+        Comprar Talismã
+    </button>
+</article>
+
+<p id="mensagem-loja" role="status"></p>
+
+    <button type="button" id="Voltar-Loja">
+        Voltar à Cidade Provisória
+    </button>
+</section>
+    <section id="Dormitório" hidden>
+        <h2>Dormitório</h2>
+        <p>Nosso personagem encontra um dormitório, onde pode descansar e recuperar suas forças. Ele(a) deve escolher entre descansar ou continuar sua jornada.</p>
+        <button type="button" id="Descansar">Descansar</button>
+        <p id="mensagem-descanso" role="status"></p>
+        <button type="button" id="Voltar-Cidade-Provisória">Voltar para a Cidade Provisória</button>
+    </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
